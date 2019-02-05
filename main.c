@@ -13,6 +13,8 @@ int main() {
            "\"x y\" to set the value in [x][y] to 1; \n"
            "When you finished, insert: \"-1 -1\" to continue.\n");
 
+
+    /*scaning part*/
     while ((scanf("%d %d", &row, &column)) != EOF)
     {
         if (row == -1 && column == -1)
@@ -29,6 +31,8 @@ int main() {
 
     printf("Please enter pair of index's to validate if the index's obtain father & son relationship;\n"
            "if you finished, enter - \"-1 -1\" as so to continue. \n");
+
+    /*validating part*/
     while (scanf("%d %d", &row, &column) != EOF)
     {
         if (row == -1 && column == -1)
