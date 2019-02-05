@@ -13,16 +13,21 @@ int main() {
            "\"x y\" to set the value in [x][y] to 1; \n"
            "When you finished, insert: \"-1 -1\" to continue.\n");
 
-    while (scanf("%d %d", &row, &column) != EOF)
+    while ((scanf("%d %d", &row, &column)) != EOF)
     {
         if (row == -1 && column == -1)
             break;
         /*as instructed - assuming that input values are valid*/
+        if (my_matrix[row][column] == 1)
+        {
+            printf("value in [%d][%d] already set to 1;",row,column);
+            continue;
+        }
         my_matrix[row][column] = 1;
     }
     print_my_matrix(my_matrix);
 
-    printf("Please enter index's to validate if the index's value is 1 or 0;\n"
+    printf("Please enter pair of index's to validate if the index's obtain father & son relationship;\n"
            "if you finished, enter - \"-1 -1\" as so to continue. \n");
     while (scanf("%d %d", &row, &column) != EOF)
     {
@@ -30,9 +35,9 @@ int main() {
             break;
 
         if (path(my_matrix, row, column) == TRUE)
-            printf("value in: matrix[%d][%d] is %d \n",row, column, TRUE);
+            printf("%d is the father of %d \n",row, column);
         else
-            printf("value in: matrix[%d][%d] is %d \n",row, column, FALSE);
+            printf("%d is NOT the father of %d \n",row, column);
 
     }
 
