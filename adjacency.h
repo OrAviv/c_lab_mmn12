@@ -7,7 +7,7 @@
 #define MAMAN12_ADJACENCY_H
 #define TRUE 1
 #define FALSE 0
-#define N 20
+#define N 5
 
 typedef int adjmat[N][N];
 

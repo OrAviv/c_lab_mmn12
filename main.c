@@ -8,10 +8,10 @@ int main() {
     int row = 0;
     int column = 0;
 
-    printf("Hello! the matrix size is: %d \n", N);
+    printf("Hello! the matrix size is: %d by %d \n", N,N);
     printf("Please insert matrix values in the following form: \n"
            "\"x y\" to set the value in [x][y] to 1; \n"
-           "When you finished, insert -\"-1 -1\" to continue;\n");
+           "When you finished, insert -\"-1 -1\" to continue.\n");
 
     while (scanf("%d %d", &row, &column) != EOF)
     {
@@ -22,7 +22,7 @@ int main() {
     }
     print_my_matrix(my_matrix);
 
-    printf("Please enter index's to validate if the index's value is TRUE or FAlSE;\n"
+    printf("Please enter index's to validate if the index's value is 1 or 0;\n"
            "if you finished, enter - \"-1 -1\" as so to continue. \n");
     while (scanf("%d %d", &row, &column) != EOF)
     {
@@ -35,11 +35,6 @@ int main() {
             printf("value in: matrix[%d][%d] is %d \n",row, column, FALSE);
 
     }
-
-
-
-
-
 
 
 
