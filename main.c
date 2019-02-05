@@ -11,7 +11,7 @@ int main() {
     printf("Hello! the matrix size is: %d by %d \n", N,N);
     printf("Please insert matrix values in the following form: \n"
            "\"x y\" to set the value in [x][y] to 1; \n"
-           "When you finished, insert -\"-1 -1\" to continue.\n");
+           "When you finished, insert: \"-1 -1\" to continue.\n");
 
     while (scanf("%d %d", &row, &column) != EOF)
     {
