@@ -32,7 +32,8 @@ int main() {
     printf("Please enter pair of index's to validate if the index's obtain father & son relationship;\n"
            "if you finished, enter - \"-1 -1\" as so to continue. \n");
 
-    /*validating part*/
+    /*validating part -validation continues as long as EOF or '-1 -1' is not inserted;
+     *          validation is made by *path* function, which described in adjacency.c.*/
     while (scanf("%d %d", &row, &column) != EOF)
     {
         if (row == -1 && column == -1)
