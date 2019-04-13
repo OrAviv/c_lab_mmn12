@@ -16,8 +16,14 @@ int path(int matrix[N][N] ,int u, int v)
         for (int i = 0; i < N; i++)
         {
             if(matrix[u][i] == TRUE)
-                if(path(matrix, i, v) == TRUE)
+            {
+                /*this check eliminates the possibility to infinite *path* function runs.*/
+                if (u == i)
+                    continue;
+
+                if (path(matrix, i, v) == TRUE)
                     return TRUE;
+            }
         }
         return FALSE;
     }
